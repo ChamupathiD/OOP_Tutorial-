@@ -1,15 +1,83 @@
-# Product class diagram
+# Tutorial 3 — Product, ProductService & ProductController Class Diagram
+
+## PlantUML
+
+```plantuml
+@startuml
+
+class Product {
+  - id : Long
+  - name : String
+  - price : double
+  + getId() : Long
+  + getName() : String
+  + getPrice() : double
+  + setId(id : Long) : void
+  + setName(name : String) : void
+  + setPrice(price : double) : void
+}
+
+class ProductService {
+  - products : List<Product>
+  - nextId : Long
+  + getAllProducts() : List<Product>
+  + getProductById(id : Long) : Optional<Product>
+  + addProduct(product : Product) : Product
+  + deleteProduct(id : Long) : void
+  + findByName(name : String) : List<Product>
+}
+
+class ProductController {
+  - productService : ProductService
+  + getAllProducts() : List<Product>
+  + getProductById(id : Long) : Product
+  + addProduct(product : Product) : Product
+  + deleteProduct(id : Long) : void
+}
+
+' ..> is a dependency: DASHED line, open arrow
+ProductController ..> ProductService
+
+' --> is an association: SOLID line
+ProductService --> Product
+
+@enduml
+```
+
+## Mermaid
 
 ```mermaid
 classDiagram
     class Product {
-        -Long id
-        -String name
-        -double price
-        +Product()
-        +Product(Long id, String name, double price)
+        -id : Long
+        -name : String
+        -price : double
         +getId() Long
         +getName() String
         +getPrice() double
+        +setId(id : Long) void
+        +setName(name : String) void
+        +setPrice(price : double) void
     }
+
+    class ProductService {
+        -products : List~Product~
+        -nextId : Long
+        +getAllProducts() List~Product~
+        +getProductById(id : Long) Optional~Product~
+        +addProduct(product : Product) Product
+        +deleteProduct(id : Long) void
+        +findByName(name : String) List~Product~
+    }
+
+    class ProductController {
+        -productService : ProductService
+        +getAllProducts() List~Product~
+        +getProductById(id : Long) Product
+        +addProduct(product : Product) Product
+        +deleteProduct(id : Long) void
+    }
+
+    ProductController ..> ProductService
+    ProductService --> Product
 ```
