@@ -1,0 +1,176 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 650 460] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+7 0 obj
+<< /Length 2253 >>
+stream
+BT
+/F2 13 Tf
+0.150 0.200 0.300 rg
+175 430 Td (5COSC019W Tutorial 4 - Product Inheritance Hierarchy \(UML\)) Tj
+ET
+1.3 w
+0.985 0.990 1.000 rg
+0.180 0.240 0.350 RG
+215.0 251 220 154 re B
+1.3 w
+0.910 0.940 0.990 rg
+0.180 0.240 0.350 RG
+215.0 377 220 28 re B
+BT
+/F2 12 Tf
+0.080 0.120 0.220 rg
+302.25 386 Td (Product) Tj
+ET
+1.0 w
+0.180 0.240 0.350 RG
+215.0 314 m 435.0 314 l S
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+227.0 361 Td (- id : Long) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+227.0 344 Td (- name : String) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+227.0 327 Td (- price : double) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+227.0 298 Td (+ getId\(\) : Long) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+227.0 281 Td (+ getName\(\) : String) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+227.0 264 Td (+ getPrice\(\) : double) Tj
+ET
+1.3 w
+0.985 0.990 1.000 rg
+0.180 0.240 0.350 RG
+55 55 245 120 re B
+1.3 w
+0.910 0.940 0.990 rg
+0.180 0.240 0.350 RG
+55 147 245 28 re B
+BT
+/F2 12 Tf
+0.080 0.120 0.220 rg
+132.0 156 Td (DigitalProduct) Tj
+ET
+1.0 w
+0.180 0.240 0.350 RG
+55 101 m 300 101 l S
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+67 131 Td (- downloadUrl : String) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+67 114 Td (- fileSizeMB : double) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+67 85 Td (+ getDownloadUrl\(\) : String) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+67 68 Td (+ getFileSizeMB\(\) : double) Tj
+ET
+1.3 w
+0.985 0.990 1.000 rg
+0.180 0.240 0.350 RG
+350 55 245 120 re B
+1.3 w
+0.910 0.940 0.990 rg
+0.180 0.240 0.350 RG
+350 147 245 28 re B
+BT
+/F2 12 Tf
+0.080 0.120 0.220 rg
+423.75 156 Td (PhysicalProduct) Tj
+ET
+1.0 w
+0.180 0.240 0.350 RG
+350 101 m 595 101 l S
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+362 131 Td (- weightKg : double) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+362 114 Td (- dimensions : String) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+362 85 Td (+ getWeightKg\(\) : double) Tj
+ET
+BT
+/F3 10 Tf
+0.150 0.180 0.220 rg
+362 68 Td (+ getDimensions\(\) : String) Tj
+ET
+1.3 w
+0.18 0.24 0.35 RG
+177.5 175 m 177.5 206.5 l 295.0 206.5 l 295.0 238 l S
+1.3 w
+1.0 1.0 1.0 rg
+0.18 0.24 0.35 RG
+295.0 251 m 288.0 238 l 302.0 238 l h B
+1.3 w
+0.18 0.24 0.35 RG
+472.5 175 m 472.5 206.5 l 355.0 206.5 l 355.0 238 l S
+1.3 w
+1.0 1.0 1.0 rg
+0.18 0.24 0.35 RG
+355.0 251 m 348.0 238 l 362.0 238 l h B
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000000331 00000 n 
+0000000406 00000 n 
+0000000474 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2779
+%%EOF

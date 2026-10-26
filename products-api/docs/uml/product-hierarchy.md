@@ -1,0 +1,67 @@
+# Tutorial 4 — Product Inheritance Hierarchy Class Diagram
+
+## PlantUML
+
+```plantuml
+@startuml
+
+class Product {
+  - id : Long
+  - name : String
+  - price : double
+  + getId() : Long
+  + getName() : String
+  + getPrice() : double
+}
+
+class DigitalProduct {
+  - downloadUrl : String
+  - fileSizeMB : double
+  + getDownloadUrl() : String
+  + getFileSizeMB() : double
+}
+
+class PhysicalProduct {
+  - weightKg : double
+  - dimensions : String
+  + getWeightKg() : double
+  + getDimensions() : String
+}
+
+' <|-- is the inheritance arrow. The PARENT goes on the left.
+Product <|-- DigitalProduct
+Product <|-- PhysicalProduct
+
+@enduml
+```
+
+## Mermaid
+
+```mermaid
+classDiagram
+    class Product {
+        -id : Long
+        -name : String
+        -price : double
+        +getId() Long
+        +getName() String
+        +getPrice() double
+    }
+
+    class DigitalProduct {
+        -downloadUrl : String
+        -fileSizeMB : double
+        +getDownloadUrl() String
+        +getFileSizeMB() double
+    }
+
+    class PhysicalProduct {
+        -weightKg : double
+        -dimensions : String
+        +getWeightKg() double
+        +getDimensions() String
+    }
+
+    Product <|-- DigitalProduct
+    Product <|-- PhysicalProduct
+```
