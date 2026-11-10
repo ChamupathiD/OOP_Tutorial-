@@ -16,6 +16,11 @@ public class BundleProduct extends Product {
         this.items = items;
     }
 
+    @Override
+    public String getSummary() {
+        return getName();
+    }
+
     public List<Product> getItems() {
         return items;
     }
