@@ -6,10 +6,10 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 650 460] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 650 490] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R /F4 7 0 R /F5 8 0 R >> >> /Contents 9 0 R >>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
 endobj
 5 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
@@ -18,159 +18,224 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 7 0 obj
-<< /Length 2253 >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Oblique >>
+endobj
+8 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique >>
+endobj
+9 0 obj
+<< /Length 3246 >>
 stream
 BT
 /F2 13 Tf
 0.150 0.200 0.300 rg
-175 430 Td (5COSC019W Tutorial 4 - Product Inheritance Hierarchy \(UML\)) Tj
+145 455 Td (5COSC019W Tutorial 5 - Polymorphism & Abstraction \(UML\)) Tj
 ET
+% Product (abstract) box: x=45, y=265, w=255, h=160
 1.3 w
 0.985 0.990 1.000 rg
 0.180 0.240 0.350 RG
-215.0 251 220 154 re B
+45 265 255 160 re B
 1.3 w
 0.910 0.940 0.990 rg
 0.180 0.240 0.350 RG
-215.0 377 220 28 re B
+45 391 255 34 re B
 BT
-/F2 12 Tf
+/F1 9 Tf
+0.250 0.300 0.420 rg
+145 413 Td (<<abstract>>) Tj
+ET
+BT
+/F5 12 Tf
 0.080 0.120 0.220 rg
-302.25 386 Td (Product) Tj
+148 398 Td (Product) Tj
 ET
 1.0 w
 0.180 0.240 0.350 RG
-215.0 314 m 435.0 314 l S
+45 330 m 300 330 l S
 BT
 /F3 10 Tf
 0.150 0.180 0.220 rg
-227.0 361 Td (- id : Long) Tj
+57 375 Td (- id : Long) Tj
 ET
 BT
 /F3 10 Tf
 0.150 0.180 0.220 rg
-227.0 344 Td (- name : String) Tj
+57 358 Td (- name : String) Tj
 ET
 BT
 /F3 10 Tf
 0.150 0.180 0.220 rg
-227.0 327 Td (- price : double) Tj
+57 341 Td (- price : double) Tj
+ET
+BT
+/F4 10 Tf
+0.150 0.180 0.220 rg
+57 312 Td (+ getSummary\(\) : String) Tj
 ET
 BT
 /F3 10 Tf
 0.150 0.180 0.220 rg
-227.0 298 Td (+ getId\(\) : Long) Tj
+57 295 Td (+ getName\(\) : String) Tj
 ET
 BT
 /F3 10 Tf
 0.150 0.180 0.220 rg
-227.0 281 Td (+ getName\(\) : String) Tj
+57 278 Td (+ getPrice\(\) : double) Tj
 ET
-BT
-/F3 10 Tf
-0.150 0.180 0.220 rg
-227.0 264 Td (+ getPrice\(\) : double) Tj
-ET
+
+% Discountable (interface) box: x=350, y=300, w=255, h=110
 1.3 w
 0.985 0.990 1.000 rg
 0.180 0.240 0.350 RG
-55 55 245 120 re B
+350 300 255 110 re B
 1.3 w
 0.910 0.940 0.990 rg
 0.180 0.240 0.350 RG
-55 147 245 28 re B
+350 374 255 36 re B
+BT
+/F1 9 Tf
+0.250 0.300 0.420 rg
+448 397 Td (<<interface>>) Tj
+ET
 BT
 /F2 12 Tf
 0.080 0.120 0.220 rg
-132.0 156 Td (DigitalProduct) Tj
+438 381 Td (Discountable) Tj
 ET
 1.0 w
 0.180 0.240 0.350 RG
-55 101 m 300 101 l S
+350 356 m 605 356 l S
 BT
-/F3 10 Tf
+/F3 9.5 Tf
 0.150 0.180 0.220 rg
-67 131 Td (- downloadUrl : String) Tj
+360 336 Td (+ applyDiscount\(rate : double\) : void) Tj
 ET
 BT
-/F3 10 Tf
+/F3 9.5 Tf
 0.150 0.180 0.220 rg
-67 114 Td (- fileSizeMB : double) Tj
+360 316 Td (+ getDiscountedPrice\(\) : double) Tj
 ET
-BT
-/F3 10 Tf
-0.150 0.180 0.220 rg
-67 85 Td (+ getDownloadUrl\(\) : String) Tj
-ET
-BT
-/F3 10 Tf
-0.150 0.180 0.220 rg
-67 68 Td (+ getFileSizeMB\(\) : double) Tj
-ET
+
+% DigitalProduct box: x=45, y=45, w=255, h=140
 1.3 w
 0.985 0.990 1.000 rg
 0.180 0.240 0.350 RG
-350 55 245 120 re B
+45 45 255 140 re B
 1.3 w
 0.910 0.940 0.990 rg
 0.180 0.240 0.350 RG
-350 147 245 28 re B
+45 157 255 28 re B
 BT
 /F2 12 Tf
 0.080 0.120 0.220 rg
-423.75 156 Td (PhysicalProduct) Tj
+128 166 Td (DigitalProduct) Tj
 ET
 1.0 w
 0.180 0.240 0.350 RG
-350 101 m 595 101 l S
+45 108 m 300 108 l S
 BT
-/F3 10 Tf
+/F3 9.5 Tf
 0.150 0.180 0.220 rg
-362 131 Td (- weightKg : double) Tj
+55 140 Td (- downloadUrl : String) Tj
 ET
 BT
-/F3 10 Tf
+/F3 9.5 Tf
 0.150 0.180 0.220 rg
-362 114 Td (- dimensions : String) Tj
+55 123 Td (- fileSizeMB : double) Tj
 ET
 BT
-/F3 10 Tf
+/F3 9.5 Tf
 0.150 0.180 0.220 rg
-362 85 Td (+ getWeightKg\(\) : double) Tj
+55 88 Td (+ getSummary\(\) : String) Tj
 ET
 BT
-/F3 10 Tf
+/F3 9.5 Tf
 0.150 0.180 0.220 rg
-362 68 Td (+ getDimensions\(\) : String) Tj
+55 68 Td (+ applyDiscount\(rate : double\) : void) Tj
 ET
+
+% PhysicalProduct box: x=350, y=45, w=255, h=140
 1.3 w
+0.985 0.990 1.000 rg
+0.180 0.240 0.350 RG
+350 45 255 140 re B
+1.3 w
+0.910 0.940 0.990 rg
+0.180 0.240 0.350 RG
+350 157 255 28 re B
+BT
+/F2 12 Tf
+0.080 0.120 0.220 rg
+425 166 Td (PhysicalProduct) Tj
+ET
+1.0 w
+0.180 0.240 0.350 RG
+350 108 m 605 108 l S
+BT
+/F3 9.5 Tf
+0.150 0.180 0.220 rg
+360 140 Td (- weightKg : double) Tj
+ET
+BT
+/F3 9.5 Tf
+0.150 0.180 0.220 rg
+360 123 Td (- dimensions : String) Tj
+ET
+BT
+/F3 9.5 Tf
+0.150 0.180 0.220 rg
+360 88 Td (+ getSummary\(\) : String) Tj
+ET
+BT
+/F3 9.5 Tf
+0.150 0.180 0.220 rg
+360 68 Td (+ applyDiscount\(rate : double\) : void) Tj
+ET
+
+% Solid arrows (<|--) to Product (x=140 and x=210, y=265)
+1.3 w
+[] 0 d
 0.18 0.24 0.35 RG
-177.5 175 m 177.5 206.5 l 295.0 206.5 l 295.0 238 l S
-1.3 w
+140 185 m 140 252 l S
 1.0 1.0 1.0 rg
-0.18 0.24 0.35 RG
-295.0 251 m 288.0 238 l 302.0 238 l h B
-1.3 w
-0.18 0.24 0.35 RG
-472.5 175 m 472.5 206.5 l 355.0 206.5 l 355.0 238 l S
-1.3 w
+140 265 m 133 252 l 147 252 l h B
+
+430 185 m 430 225 l 210 225 l 210 252 l S
 1.0 1.0 1.0 rg
+210 265 m 203 252 l 217 252 l h B
+
+% Dashed arrows (<|..) to Discountable (x=440 and x=515, y=300)
+1.3 w
+[4 3] 0 d
 0.18 0.24 0.35 RG
-355.0 251 m 348.0 238 l 362.0 238 l h B
+220 185 m 220 245 l 440 245 l 440 287 l S
+[] 0 d
+1.0 1.0 1.0 rg
+440 300 m 433 287 l 447 287 l h B
+
+[4 3] 0 d
+515 185 m 515 287 l S
+[] 0 d
+1.0 1.0 1.0 rg
+515 300 m 508 287 l 522 287 l h B
+
 endstream
 endobj
 xref
-0 8
+0 10
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
-0000000261 00000 n 
-0000000331 00000 n 
-0000000406 00000 n 
-0000000474 00000 n 
+0000000281 00000 n 
+0000000359 00000 n 
+0000000434 00000 n 
+0000000502 00000 n 
+0000000578 00000 n 
+0000000660 00000 n 
 trailer
-<< /Size 8 /Root 1 0 R >>
+<< /Size 10 /Root 1 0 R >>
 startxref
-2779
+3958
 %%EOF

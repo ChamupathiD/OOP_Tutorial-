@@ -1,36 +1,45 @@
-# Tutorial 4 — Product Inheritance Hierarchy Class Diagram
+# Tutorial 5 — Polymorphism & Abstraction Class Diagram
 
 ## PlantUML
 
 ```plantuml
 @startuml
 
-class Product {
+abstract class Product {
   - id : Long
   - name : String
   - price : double
-  + getId() : Long
+  + {abstract} getSummary() : String
   + getName() : String
   + getPrice() : double
+}
+
+interface Discountable {
+  + applyDiscount(rate : double) : void
+  + getDiscountedPrice() : double
 }
 
 class DigitalProduct {
   - downloadUrl : String
   - fileSizeMB : double
-  + getDownloadUrl() : String
-  + getFileSizeMB() : double
+  + getSummary() : String
+  + applyDiscount(rate : double) : void
 }
 
 class PhysicalProduct {
   - weightKg : double
   - dimensions : String
-  + getWeightKg() : double
-  + getDimensions() : String
+  + getSummary() : String
+  + applyDiscount(rate : double) : void
 }
 
-' <|-- is the inheritance arrow. The PARENT goes on the left.
+' <|-- generalisation (extends): SOLID line
 Product <|-- DigitalProduct
 Product <|-- PhysicalProduct
+
+' <|.. realisation (implements): DASHED line
+Discountable <|.. DigitalProduct
+Discountable <|.. PhysicalProduct
 
 @enduml
 ```
@@ -40,28 +49,37 @@ Product <|-- PhysicalProduct
 ```mermaid
 classDiagram
     class Product {
+        <<abstract>>
         -id : Long
         -name : String
         -price : double
-        +getId() Long
+        +getSummary()* String
         +getName() String
         +getPrice() double
+    }
+
+    class Discountable {
+        <<interface>>
+        +applyDiscount(rate : double) void
+        +getDiscountedPrice() double
     }
 
     class DigitalProduct {
         -downloadUrl : String
         -fileSizeMB : double
-        +getDownloadUrl() String
-        +getFileSizeMB() double
+        +getSummary() String
+        +applyDiscount(rate : double) void
     }
 
     class PhysicalProduct {
         -weightKg : double
         -dimensions : String
-        +getWeightKg() double
-        +getDimensions() String
+        +getSummary() String
+        +applyDiscount(rate : double) void
     }
 
     Product <|-- DigitalProduct
     Product <|-- PhysicalProduct
+    Discountable <|.. DigitalProduct
+    Discountable <|.. PhysicalProduct
 ```
