@@ -32,7 +32,7 @@ public class ProductService {
     }
 
     public Product addProduct(Product product) {
-        product.setId(nextId++);   // use the value, then add one
+        product.setId(nextId++);
         products.add(product);
         return product;
     }

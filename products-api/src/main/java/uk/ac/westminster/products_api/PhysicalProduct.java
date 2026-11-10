@@ -1,7 +1,7 @@
 package uk.ac.westminster.products_api;
 
-// A PhysicalProduct IS-A Product because every shipped item is a catalogue product that shares an id, name, and price with all other products.
-// A ShoppingCart would NOT pass this test because a cart is not a product sold in the shop; instead, a ShoppingCart HAS-A list of Products (composition).
+// physical product is-a product bc it has id, name, price like others
+// shopping cart is not a product, it just has-a list of products
 public class PhysicalProduct extends Product {
 
     private double weightKg;

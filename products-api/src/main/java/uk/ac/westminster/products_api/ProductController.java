@@ -13,7 +13,6 @@ import java.util.List;
 @RestController
 public class ProductController {
 
-    // Spring creates the ProductService and hands it over.
     @Autowired
     private ProductService productService;
 
