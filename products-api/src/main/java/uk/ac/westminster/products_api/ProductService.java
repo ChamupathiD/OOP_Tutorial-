@@ -12,13 +12,21 @@ public class ProductService {
     private Long nextId = 1L;
 
     public ProductService() {
-        products.add(new DigitalProduct(
+        DigitalProduct ebook = new DigitalProduct(
                 nextId++, "Clean Code (E-book)", 29.99,
-                "/downloads/clean-code.pdf", 4.2));
+                "/downloads/clean-code.pdf", 4.2);
 
-        products.add(new PhysicalProduct(
+        PhysicalProduct monitor = new PhysicalProduct(
                 nextId++, "27-inch Monitor", 249.99,
-                5.4, "61cm x 41cm x 18cm"));
+                5.4, "61cm x 41cm x 18cm");
+
+        products.add(ebook);
+        products.add(monitor);
+
+        // seed bundle product for stretch task
+        products.add(new BundleProduct(
+                nextId++, "Starter Dev Bundle", 259.99,
+                List.of(ebook, monitor)));
     }
 
     public List<Product> getAllProducts() {
