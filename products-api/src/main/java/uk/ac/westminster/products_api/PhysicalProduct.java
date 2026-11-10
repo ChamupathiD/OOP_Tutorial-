@@ -17,6 +17,13 @@ public class PhysicalProduct extends Product {
         this.dimensions = dimensions;
     }
 
+    // @Override checks if method name has typos at compile time
+    @Override
+    public String getSummary() {
+        return "Physical: " + getName()
+                + " | Weight: " + weightKg + "kg";
+    }
+
     public double getWeightKg() {
         return weightKg;
     }
