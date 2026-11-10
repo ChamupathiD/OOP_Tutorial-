@@ -46,4 +46,13 @@ public class ProductService {
                 .filter(p -> p.getName().contains(name))
                 .toList();
     }
+
+    // p.applyDiscount(0.10) wont compile bc p is Product not Discountable (need instanceof first)
+    public List<String> getAllSummaries() {
+        List<String> summaries = new ArrayList<>();
+        for (Product p : products) {
+            summaries.add(p.getSummary());
+        }
+        return summaries;
+    }
 }
